@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://clg86por0pn8f"]
+
+[ext_resource type="Script" uid="uid://7up08v2ac04e" path="res://scripts/player_2.gd" id="1_s551d"]
+[ext_resource type="Texture2D" uid="uid://dfk02vw5bdh1s" path="res://assets/Adsız.png" id="2_yjax8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vod78"]
+radius = 30.0
+
+[node name="player2" type="Area2D" unique_id=441924736]
+script = ExtResource("1_s551d")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1806916672]
+modulate = Color(1, 1, 0, 1)
+texture = ExtResource("2_yjax8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=869100537]
+shape = SubResource("CircleShape2D_vod78")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1650892425]
