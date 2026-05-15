@@ -1,8 +1,7 @@
 [gd_scene format=4 uid="uid://bmdobqmqwsdfp"]
 
-[ext_resource type="PackedScene" uid="uid://5lp651s2vjep" path="res://scenes/player_1.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://dfk02vw5bdh1s" path="res://assets/Adsız.png" id="2_yqjtg"]
-[ext_resource type="PackedScene" uid="uid://clg86por0pn8f" path="res://scenes/player_2.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://5lp651s2vjep" path="res://scenes/player.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://betghg8fek07w" path="res://scenes/item.tscn" id="4_lbhrr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
@@ -21,15 +20,16 @@ sources/0 = SubResource("TileSetAtlasSource_lnu2h")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=436181447]
 zoom = Vector2(0.5, 0.5)
 
-[node name="player1" parent="." unique_id=441924736 instance=ExtResource("1_uwrxv")]
-position = Vector2(320, -64)
-
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2038846139]
 tile_map_data = PackedByteArray("AAAAAAMAAAAAAAAAAAABAAMAAAAAAAAAAAACAAMAAAAAAAAAAAADAAMAAAAAAAAAAAAEAAMAAAAAAAAAAAAEAAEAAAAAAAAAAAAEAAAAAAAAAAAAAAAEAP//AAAAAAAAAAAEAP7/AAAAAAAAAAAEAP3/AAAAAAAAAAD///7/AAAAAAAAAAD+//7/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_lbhrr")
 
-[node name="player2" parent="." unique_id=27542694 instance=ExtResource("3_lnu2h")]
-position = Vector2(-192, 64)
-
 [node name="item" parent="." unique_id=791361605 instance=ExtResource("4_lbhrr")]
 position = Vector2(192, 64)
+
+[node name="player1" parent="." unique_id=441924736 instance=ExtResource("3_lnu2h")]
+position = Vector2(192, 192)
+
+[node name="player2" parent="." unique_id=2014615425 instance=ExtResource("3_lnu2h")]
+position = Vector2(-64, 64)
+reversed = true

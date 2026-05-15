@@ -18,12 +18,12 @@ func _ready():
 	#position += Vector2.ONE * tile_size / 2
 	pass
 func move(dir):
-	ray.target_position = inputs[dir] * tile_size
+	ray.target_position = dir * tile_size
 	ray.force_raycast_update()
 	if !ray.is_colliding():
 		#position += inputs[dir] * tile_size
 		var tween = get_tree().create_tween()
-		tween.tween_property(self, "position", position + inputs[dir] * tile_size, 1.0/animation_speed).set_trans(Tween.TRANS_SINE)
+		tween.tween_property(self, "position", position + dir * tile_size, 1.0/animation_speed).set_trans(Tween.TRANS_SINE)
 		moving = true
 		#$AnimationPlayer.play(dir)
 		await tween.finished

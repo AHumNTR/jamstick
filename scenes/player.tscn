@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://5lp651s2vjep"]
 
-[ext_resource type="Script" uid="uid://ctuc6bm3snka6" path="res://scripts/player_1.gd" id="1_gneq0"]
-[ext_resource type="Texture2D" uid="uid://dfk02vw5bdh1s" path="res://assets/Adsız.png" id="2_gneq0"]
+[ext_resource type="Script" uid="uid://ctuc6bm3snka6" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://dfk02vw5bdh1s" path="res://assets/Adsız.png" id="2_qhqgy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vod78"]
 radius = 30.0
 
 [node name="player1" type="Area2D" unique_id=441924736]
-script = ExtResource("1_gneq0")
+script = ExtResource("1_g2els")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1806916672]
 modulate = Color(1, 0, 1, 1)
-texture = ExtResource("2_gneq0")
+texture = ExtResource("2_qhqgy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=869100537]
 shape = SubResource("CircleShape2D_vod78")
