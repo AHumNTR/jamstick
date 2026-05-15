@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://betghg8fek07w"]
+
+[ext_resource type="Script" uid="uid://bin8v7ea8ok3e" path="res://item.gd" id="1_s8enn"]
+[ext_resource type="Texture2D" uid="uid://dfk02vw5bdh1s" path="res://assets/Adsız.png" id="2_6muww"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vod78"]
+radius = 30.0
+
+[node name="item" type="Area2D" unique_id=441924736]
+script = ExtResource("1_s8enn")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1806916672]
+modulate = Color(0, 1, 0, 1)
+texture = ExtResource("2_6muww")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=869100537]
+shape = SubResource("CircleShape2D_vod78")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1650892425]
+collide_with_areas = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

@@ -17,3 +17,4 @@ texture = ExtResource("2_gneq0")
 shape = SubResource("CircleShape2D_vod78")
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=1650892425]
+collide_with_areas = true
