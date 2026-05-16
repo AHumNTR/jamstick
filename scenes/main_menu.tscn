@@ -27,12 +27,15 @@ theme_override_constants/v_separation = 30
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_font_sizes/font_size = 200
 text = "Map1"
 
 [node name="Button2" type="Button" parent="AspectRatioContainer/GridContainer" unique_id=1370355955]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-text = "Map1"
+theme_override_font_sizes/font_size = 200
+text = "Quit"
 
 [connection signal="pressed" from="AspectRatioContainer/GridContainer/Button" to="." method="changeScene" binds= ["res://scenes/game.tscn"]]
+[connection signal="pressed" from="AspectRatioContainer/GridContainer/Button2" to="." method="exitGame"]
