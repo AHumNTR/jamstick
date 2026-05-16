@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://betghg8fek07w"]
 
 [ext_resource type="Script" uid="uid://bin8v7ea8ok3e" path="res://item.gd" id="1_s8enn"]
-[ext_resource type="Texture2D" uid="uid://dfk02vw5bdh1s" path="res://assets/Adsız.png" id="2_6muww"]
+[ext_resource type="Texture2D" uid="uid://dfk02vw5bdh1s" path="res://assets/wall.png" id="2_6muww"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vod78"]
 radius = 30.0
