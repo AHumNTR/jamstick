@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://fgb1v43fo5xs"]
+
+[ext_resource type="Script" uid="uid://dj2xueao455je" path="res://scripts/scene_selector.gd" id="1_l6cm7"]
+
+[node name="Main Menu" type="Control" unique_id=1050159190]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l6cm7")
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="." unique_id=159619739]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="AspectRatioContainer" unique_id=291574526]
+layout_mode = 2
+theme_override_constants/v_separation = 30
+
+[node name="Button" type="Button" parent="AspectRatioContainer/GridContainer" unique_id=335460124]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Map1"
+
+[node name="Button2" type="Button" parent="AspectRatioContainer/GridContainer" unique_id=1370355955]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Map1"
+
+[connection signal="pressed" from="AspectRatioContainer/GridContainer/Button" to="." method="changeScene" binds= ["res://scenes/game.tscn"]]
