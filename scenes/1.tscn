@@ -1,40 +1,38 @@
-[gd_scene format=4 uid="uid://bmdobqmqwsdfp"]
+[gd_scene format=4 uid="uid://b6xk6haxf0ie"]
 
-[ext_resource type="Script" uid="uid://b8tumf5l3nwfg" path="res://scenes/game.gd" id="1_lbhrr"]
-[ext_resource type="Texture2D" uid="uid://dwq5u4tg7cpdb" path="res://assets/Adsız2.png" id="2_lnu2h"]
-[ext_resource type="Texture2D" uid="uid://dfk02vw5bdh1s" path="res://assets/Adsız.png" id="2_yqjtg"]
-[ext_resource type="PackedScene" uid="uid://5lp651s2vjep" path="res://scenes/player.tscn" id="3_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://dfk02vw5bdh1s" path="res://assets/Adsız.png" id="1_gafq4"]
+[ext_resource type="Texture2D" uid="uid://dwq5u4tg7cpdb" path="res://assets/Adsız2.png" id="2_fes4b"]
+[ext_resource type="PackedScene" uid="uid://5lp651s2vjep" path="res://scenes/player.tscn" id="3_xx04v"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
-texture = ExtResource("2_yqjtg")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i8ylg"]
+texture = ExtResource("1_gafq4")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbhrr"]
-texture = ExtResource("2_lnu2h")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8xfph"]
+texture = ExtResource("2_fes4b")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_lbhrr"]
+[sub_resource type="TileSet" id="TileSet_8hh8q"]
 tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_lnu2h")
-sources/1 = SubResource("TileSetAtlasSource_lbhrr")
+sources/0 = SubResource("TileSetAtlasSource_i8ylg")
+sources/1 = SubResource("TileSetAtlasSource_8xfph")
 
-[node name="game" type="Node2D" unique_id=269883105]
-script = ExtResource("1_lbhrr")
+[node name="1" type="Node2D" unique_id=25547422]
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=436181447]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1824610494]
 zoom = Vector2(0.5, 0.5)
 
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2038846139]
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=631874907]
 tile_map_data = PackedByteArray("AAD///7/AQAAAAAAAAD+//7/AQAAAAAAAAD//wIAAQAAAAAAAAD//wEAAQAAAAAAAAD//wAAAQAAAAAAAAD/////AQAAAAAAAAD+////AQAAAAAAAAD+/wAAAQAAAAAAAAD+/wEAAQAAAAAAAAD+/wIAAQAAAAAAAAD+/wMAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAEAAQAAAAAAAAAAAAAAAQAAAAAAAAAAAP//AQAAAAAAAAAAAP7/AQAAAAAAAAD+//3/AQAAAAAAAAD///3/AQAAAAAAAAAAAP3/AQAAAAAAAAABAP3/AQAAAAAAAAACAP3/AQAAAAAAAAADAP3/AQAAAAAAAAADAP7/AQAAAAAAAAADAP//AQAAAAAAAAADAAAAAQAAAAAAAAADAAEAAQAAAAAAAAADAAIAAQAAAAAAAAACAAIAAQAAAAAAAAABAAIAAQAAAAAAAAACAAEAAQAAAAAAAAACAAAAAQAAAAAAAAACAP//AQAAAAAAAAACAP7/AQAAAAAAAAABAP7/AQAAAAAAAAABAP//AQAAAAAAAAABAAAAAQAAAAAAAAABAAEAAQAAAAAAAAADAAQAAQAAAAAAAAACAAQAAQAAAAAAAAABAAQAAQAAAAAAAAAAAAQAAQAAAAAAAAD//wQAAQAAAAAAAAAAAAUAAQAAAAAAAAABAAUAAQAAAAAAAAD//wUAAQAAAAAAAAD+/wQAAQAAAAAAAAD//wMAAQAAAAAAAAAAAAMAAQAAAAAAAAABAAMAAQAAAAAAAAACAAMAAQAAAAAAAAADAAMAAQAAAAAAAAAEAAMAAQAAAAAAAAAEAAIAAQAAAAAAAAAEAAEAAQAAAAAAAAAEAAAAAQAAAAAAAAAEAP//AQAAAAAAAAAEAP7/AQAAAAAAAAAEAP3/AQAAAAAAAAAFAP7/AQAAAAAAAAAFAP//AQAAAAAAAAAFAAAAAQAAAAAAAAAFAAEAAQAAAAAAAAD8/wEAAQAAAAAAAAD9/wAAAQAAAAAAAAD9////AQAAAAAAAAD9/wEAAQAAAAAAAAD9/wIAAQAAAAAAAAD9/wMAAQAAAAAAAAD8/wIAAQAAAAAAAAD7/wEAAQAAAAAAAAD7/wAAAQAAAAAAAAD8/wAAAQAAAAAAAAAAAPz/AQAAAAAAAAABAPz/AQAAAAAAAAACAPz/AQAAAAAAAAD///z/AQAAAAAAAAD+//z/AQAAAAAAAAD9//7/AQAAAAAAAAD9//3/AQAAAAAAAAD9//z/AQAAAAAAAAADAPz/AQAAAAAAAAAGAAAAAQAAAAAAAAAGAAEAAQAAAAAAAAAGAAIAAQAAAAAAAAAGAAMAAQAAAAAAAAAFAAMAAQAAAAAAAAAFAAIAAQAAAAAAAAAHAAMAAQAAAAAAAAAHAAIAAQAAAAAAAAAGAAQAAQAAAAAAAAAHAAQAAQAAAAAAAAAFAAQAAQAAAAAAAAAEAAQAAQAAAAAAAAAEAAcAAQAAAAAAAAADAAYAAQAAAAAAAAAEAAYAAQAAAAAAAAADAAcAAQAAAAAAAAD7//7/AQAAAAAAAAD8//7/AQAAAAAAAAD8//3/AQAAAAAAAAD8////AQAAAAAAAAA=")
-tile_set = SubResource("TileSet_lbhrr")
+tile_set = SubResource("TileSet_8hh8q")
 
-[node name="player1" parent="." unique_id=441924736 instance=ExtResource("3_lnu2h")]
+[node name="player1" parent="." unique_id=441924736 instance=ExtResource("3_xx04v")]
 position = Vector2(-320, 64)
 
-[node name="player2" parent="." unique_id=2014615425 instance=ExtResource("3_lnu2h")]
+[node name="player2" parent="." unique_id=2049459130 instance=ExtResource("3_xx04v")]
 position = Vector2(320, 64)
 reversed = true

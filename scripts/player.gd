@@ -1,4 +1,5 @@
 extends Area2D
+class_name  player
 @export var reversed=false
 var animation_speed = 2
 
@@ -10,10 +11,14 @@ var inputs = {
 	"up": Vector2.UP,
 	"down": Vector2.DOWN
 }
-
+var current_level
 @onready var ray = $RayCast2D
+@onready var tilemap_layer =   get_node("../TileMapLayer")
 
 func _ready():
+	current_level = get_parent().name
+	if reversed:
+		$Sprite2D.modulate = Color.RED
 	#position = position.snapped(Vector2.ONE * tile_size)
 	#position += Vector2.ONE * tile_size / 2
 	pass
@@ -36,6 +41,17 @@ func move(dir):
 		#$AnimationPlayer.play(dir)
 		await tween.finished
 		moving = false
+		var tile_pos = tilemap_layer.local_to_map(global_position)
+		var tile_data = tilemap_layer.get_cell_tile_data(tile_pos)
+		if tile_data == null:
+			get_tree().reload_current_scene()
 		
 	elif ray.get_collider() is moveable:
 		ray.get_collider().move(inputs[dir]*(-1 if reversed else 1))
+	elif ray.get_collider() is player:
+		get_tree().change_scene_to_file("res://scenes/"+ str(int(current_level)+1) +".tscn")
+
+#sonra sorun çıkarabilir
+func _on_area_entered(area: Area2D) -> void:
+	if area is player:
+		get_tree().change_scene_to_file("res://scenes/"+ str(int(current_level)+1) +".tscn")
