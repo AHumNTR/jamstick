@@ -11,7 +11,7 @@ func _ready() -> void:
 			var item= items[source_id-2].instantiate() as moveable
 			add_child(item)
 			item.position=map_to_local(cell)
-			item.typeIndex=source_id
+			item.typeIndex=atlas_coords.y
 			var tileset_source: TileSetAtlasSource = tile_set.get_source(source_id) as TileSetAtlasSource
 			var sprite=(item.get_node("Sprite2D") as Sprite2D)
 			sprite.texture=tileset_source.texture
